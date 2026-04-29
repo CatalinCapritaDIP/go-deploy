@@ -16,9 +16,9 @@ import (
 	"sync"
 	"syscall"
 
+	"github.com/CatalinCapritaDIP/go-deploy.git/pkg/ops"
 	"github.com/joho/godotenv"
 	"github.com/spf13/cobra"
-	"gitlab.com/dip-software/bplg/erp/deployment.git/go/pkg/ops"
 	"go.yaml.in/yaml/v3"
 	"helm.sh/helm/v4/pkg/action"
 )

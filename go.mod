@@ -1,4 +1,4 @@
-module gitlab.com/dip-software/bplg/erp/deployment.git/go
+module github.com/CatalinCapritaDIP/go-deploy.git
 
 go 1.25.3
 
