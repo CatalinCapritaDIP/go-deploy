@@ -16,7 +16,7 @@ import (
 	"sync"
 	"syscall"
 
-	"github.com/CatalinCapritaDIP/go-deploy.git/pkg/ops"
+	"github.com/CatalinCapritaDIP/go-deploy.git/gode/pkg/ops"
 	"github.com/joho/godotenv"
 	"github.com/spf13/cobra"
 	"go.yaml.in/yaml/v3"
@@ -264,12 +264,14 @@ func replaceVariables(target string, variables map[string]string) (map[string]in
 		return nil, err
 	}
 	var valuesTemplate []byte
-	if target != "" {
+	if valuesFileName == "" {
+		slog.Info("reading from target dir")
 		deploymentDir := filepath.Join(cwd, "../")
 		targetDir := filepath.Join(deploymentDir, target)
 		valuesTemplate, err = os.ReadFile(filepath.Join(targetDir, VALUES_TEMPLATE_FILE))
 
-	} else if valuesFileName != "" {
+	} else {
+		slog.Info("Reading provided values", "path", valuesFileName)
 		valuesTemplate, err = os.ReadFile(valuesFileName)
 	}
 	if err != nil {

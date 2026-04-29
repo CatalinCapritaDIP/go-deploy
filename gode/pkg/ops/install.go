@@ -7,7 +7,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/CatalinCapritaDIP/go-deploy.git/pkg/k8s"
+	"github.com/CatalinCapritaDIP/go-deploy.git/gode/pkg/k8s"
 	"helm.sh/helm/v4/pkg/action"
 	"helm.sh/helm/v4/pkg/chart"
 	"helm.sh/helm/v4/pkg/chart/v2/loader"

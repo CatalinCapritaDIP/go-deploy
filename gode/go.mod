@@ -1,4 +1,4 @@
-module github.com/CatalinCapritaDIP/go-deploy.git
+module github.com/CatalinCapritaDIP/go-deploy.git/gode
 
 go 1.25.3
 
